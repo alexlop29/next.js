@@ -46,8 +46,6 @@ const Page = () => {
   const handleDownload = useCallback(
     (file: ValueProps) => {
       const link = document.createElement("a");
-
-      // Use the file content for download
       const blob = new Blob([file.content], { type: "application/octet-stream" });
       link.href = URL.createObjectURL(blob);
       link.download = file.name || "download";
@@ -99,8 +97,8 @@ const Page = () => {
               noClick={true}
             >
               {({ getRootProps, getInputProps, isFocused }) => (
-                <section className="h-32 justify-center content-center flex items-center">
-                  <div {...getRootProps({ style: style(isFocused) })}>
+                <section className="h-32 flex justify-center items-center">
+                  <div {...getRootProps({ style: style(isFocused) })} className="flex flex-col items-center justify-center w-full">
                     <input {...getInputProps()} />
                     Drag & Drop
                     <div className="text-xs">
@@ -124,7 +122,7 @@ const Page = () => {
             <div>
               {files.map((file: ValueProps, index: number) => (
                 <Fragment key={index}>
-                  <div className="flex flex-row pl-2 pr-2 pb-2 pt-4">
+                  <div className="flex flex-row items-center pl-2 pr-2 pb-2 pt-4">
                     <div className="pr-2 pt-0.5">
                       <File size={30} />
                     </div>
@@ -140,20 +138,22 @@ const Page = () => {
                       </div>
                     </div>
 
-                    <button
-                      type="button"
-                      className="focus:outline-none text-white bg-green-700 hover:bg-green-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-                      onClick={() => handleDownload(file)}
-                    >
-                      Download
-                    </button>
-                    <button
-                      type="button"
-                      className="focus:outline-none text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-                      onClick={() => handleDelete(file)}
-                    >
-                      Delete
-                    </button>
+                    <div className="flex flex-shrink-0 space-x-2">
+                      <button
+                        type="button"
+                        className="focus:outline-none text-white bg-green-700 hover:bg-green-800 font-medium rounded-lg text-sm px-4 py-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                        onClick={() => handleDownload(file)}
+                      >
+                        Download
+                      </button>
+                      <button
+                        type="button"
+                        className="focus:outline-none text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm px-4 py-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                        onClick={() => handleDelete(file)}
+                      >
+                        Delete
+                      </button>
+                    </div>
                   </div>
 
                   {index !== files.length - 1 && (
