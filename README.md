@@ -2,7 +2,7 @@
 Demonstrates a simple file uploader using Next.js and React DropZone.
 
 ## 🚀 Demo
-// Reminder to add the Loom Demo here.
+[Watch me demo the feature!](https://www.loom.com/share/c57b6054f27a426e9e4e0f49162cf008?sid=4156cef9-bf5c-4893-8faa-e71903c457d1)
 
 ## 🏄 Getting Started
 ```
