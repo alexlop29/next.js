@@ -16,7 +16,7 @@ export const Success = ({ session }: InputProps) => {
           </div>
         </div>
       </div>
-      <form action="/create-portal-session" method="POST">
+      <form action="/checkout/create-portal-session" method="POST">
         <input
           type="hidden"
           id="session-id"
