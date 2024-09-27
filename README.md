@@ -25,3 +25,5 @@ Array.from(params).length === 3
 
 ### Additonal Resources
 - [Mozilla - Payments Handler API](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Handler_API)
+
+stripe listen --forward-to localhost:3000/webhook
