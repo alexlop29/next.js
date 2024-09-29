@@ -22,20 +22,12 @@ const page = () => {
   };
 
   const handleTransfer = (list: string, value: string) => {
-    if (list == "list1") {
-      setList1(
-        list1.filter((val) => {
-          val !== value;
-        }),
-      );
-      setList2([...list2, value]);
+    if (list === "list1") {
+      setList1((prevList1) => prevList1.filter((val) => val !== value));
+      setList2((prevList2) => [...prevList2, value]);
     } else {
-      setList2(
-        list1.filter((val) => {
-          val !== value;
-        }),
-      );
-      setList1([...list1, value]);
+      setList2((prevList2) => prevList2.filter((val) => val !== value));
+      setList1((prevList1) => [...prevList1, value]);
     }
   };
 
@@ -57,10 +49,14 @@ const page = () => {
               key={index}
               name="list1"
               id={String(index)}
-              onBlur={handleChange}
+              onChange={handleChange}
               value={item}
+              className="text-black"
             />
-            <button onClick={() => handleTransfer("list1", item)} />
+            <button key={index} onClick={() => handleTransfer("list1", item)}>
+              {" "}
+              Switch{" "}
+            </button>
           </div>
         ))}
         <button onClick={() => handleNew("list1")}>Add New</button>
@@ -74,10 +70,14 @@ const page = () => {
               key={index}
               name="list2"
               id={String(index)}
-              onBlur={handleChange}
+              onChange={handleChange}
               value={item}
+              className="text-black"
             />
-            <button onClick={() => handleTransfer("list2", item)} />
+            <button key={index} onClick={() => handleTransfer("list2", item)}>
+              {" "}
+              Switch{" "}
+            </button>
           </div>
         ))}
         <button onClick={() => handleNew("list2")}>Add New</button>
