@@ -1,29 +1,17 @@
+### About
+Demonstrates a series of simple components to display users purchasing a monthly subscription.
 
-### Manual Configuration
-- Add new product: {
-    "Name": "Heart Saver",
-    "Price": "20.00 USD",
-    "Billing Period: "Monthly",
-}
-- Add features the product: {
-    "Product": "Heart Saver",
-    "Feature": "Access to Virtual Lessons",
-}
+### 🚀 Demo
+[Watch me demo the feature!](https://www.loom.com/share/7156f0b9a2054845869c734e03bd236d?sid=4cc5fe69-707c-4988-b7e6-49842c04fed0)
 
-### References
-- [Mozilla - URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams): defines utility methods to work with the query string of a URL
+### 🏄 Getting Started
 ```
-// Can also constructor from another URLSearchParams
-const params = new URLSearchParams('q=search+string&version=1&person=Eric');
-
-params.get('q') === "search string"
-params.get('version') === "1"
-Array.from(params).length === 3
+nvm use 20.17.0
+npm install
+npm run dev
 ```
-[Easy URL manipulation with URLSearchParams ](https://developer.chrome.com/blog/urlsearchparams#urlsearchparams_api)
-- [Mozilla - Web Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API):  run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.
 
-### Additonal Resources
-- [Mozilla - Payments Handler API](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Handler_API)
-
-stripe listen --forward-to localhost:3000/webhook
+### 🔧 Core libraries
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Stripe](https://docs.stripe.com/)
