@@ -1,17 +1,27 @@
+//icons
+import { Forest } from "@/assets/icons/Forest";
+import { CampFire } from "@/assets/icons/CampFire";
+import { Barbecue } from "@/assets/icons/Barbecue";
+
 const Title = () => {
   return <div className="text-3xl">What to do</div>;
 };
 
 type ActivitiesProps = {
+  icon: JSX.Element;
   activity: string;
   description: string;
 };
 
-const ActivitiesDetails = ({ activity, description }: ActivitiesProps) => {
+const ActivitiesDetails = ({
+  icon,
+  activity,
+  description,
+}: ActivitiesProps) => {
   // will need to dynamically pass in the icon
   return (
     <div className="flex flex-row gap-2">
-      <div>Icon</div>
+      <div>{icon}</div>
       <div>
         <div>{activity}</div>
         <div>{description}</div>
@@ -24,14 +34,17 @@ export const Activities = () => {
   return (
     <div>
       <ActivitiesDetails
+        icon={<Forest />}
         activity="FOREST AREA"
         description="A forest area offers peaceful trails, towering trees, and diverse wildlife. It's ideal for hiking, exploring nature, or relaxing in the fresh air."
       />
       <ActivitiesDetails
+        icon={<CampFire />}
         activity="CAMPFIRE"
         description="A campfire is a cozy gathering spot for warmth, storytelling, and roasting marshmallows. It's perfect for unwinding under the stars and enjoying the night outdoors."
       />
       <ActivitiesDetails
+        icon={<Barbecue />}
         activity="BARBECUE"
         description="A barbecue is a fun outdoor cooking experience, perfect for grilling delicious food while enjoing the fresh air. It's great for socializing and sharing meals with friends or family."
       />
