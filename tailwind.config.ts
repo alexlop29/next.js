@@ -15,6 +15,9 @@ const config: Config = {
         purple: "#151f6c",
         offwhite: "#f5f6f8",
         dark: "#383839",
+        royalpurple: "#1e2772",
+        yellow: "#fcce04",
+        transparentpurple: "#383f81"
       },
     },
   },

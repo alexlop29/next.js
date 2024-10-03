@@ -87,10 +87,10 @@ export const Panel = () => {
   return (
     <div className="bg-offwhite">
       <div className="pt-7 pl-5 pr-5 pb-3.5 space-y-7">
-      <Greeting />
-      <Reservation />
-      <Receipt />
-      <CompanyExcerpt />
+        <Greeting />
+        <Reservation />
+        <Receipt />
+        <CompanyExcerpt />
       </div>
     </div>
   );
