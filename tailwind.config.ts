@@ -21,7 +21,8 @@ const config: Config = {
         lightroyalpurple: "#444b89",
         royalpurple: "#1e2772",
         yellow: "#fcce04",
-        transparentpurple: "#383f81"
+        transparentpurple: "#383f81",
+        lightgrey: "#f5f6f8"
       },
     },
   },

@@ -18,7 +18,6 @@ const ActivitiesDetails = ({
   activity,
   description,
 }: ActivitiesProps) => {
-  // will need to dynamically pass in the icon
   return (
     <div className="flex flex-row gap-4">
       <div>
@@ -92,7 +91,7 @@ const ImportantNumbers = () => {
 export const Panel = () => {
   return (
     <div className="bg-royalpurple">
-      <div className="p-8 space-y-12">
+      <div className="p-8 space-y-16">
         <Title />
         <div className="h-px bg-transparentpurple" />
         <Activities />
