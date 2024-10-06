@@ -2,7 +2,6 @@
 import { Panel as Receipt } from "@/components/Receipt";
 import { Panel as Brochure } from "@/components/Brochure";
 import { Panel as Map } from "@/components/Map";
-import meadow from "@/assets/images/meadow-7196549_1280.jpg";
 import sunset from "@/assets/images/mountainsunset.jpg";
 
 const Page = () => {

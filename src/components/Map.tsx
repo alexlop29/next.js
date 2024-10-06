@@ -38,12 +38,12 @@ const AddressAndPhoto = () => {
 
 const GoogleMaps = () => {
   return (
-    <div className="flex flex-row justify-end items-center cursor-pointer">
+    <button className="flex flex-row justify-end items-center cursor-pointer">
       <div className="text-xs text-black mr-12"> View Directions on Google Maps </div>
       <div className="text-black flex-none"> <RightArrowIcon /> </div>
-    </div>
+    </button>
   )
-}
+};
 
 const Dialog = () => {
   return (

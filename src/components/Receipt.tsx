@@ -6,7 +6,7 @@ const Greeting = () => {
     <div className="">
       <div className="text-3xl text-orange text-black">Hi, Samantha</div>
       <div className="text-xl text-purple text-black">
-        We can't wait to welcome you here!
+        We can not wait to welcome you here!
       </div>
     </div>
   );
@@ -60,12 +60,12 @@ const ReceiptDetails = ({ title, content }: DetailsProps) => {
 
 const Download = () => {
   return (
-    <div className="bg-black flex flex-row p-4 cursor-pointer justify-end items-center">
+    <button className="bg-black flex flex-row p-4 cursor-pointer justify-end items-center w-full">
       <div className="text-white text-sm mr-24">Download Receipt</div>
       <div className="flex-none">
         <RightArrowIcon />
       </div>
-    </div>
+    </button>
   );
 };
 
@@ -87,7 +87,7 @@ const CompanyExcerpt = () => {
     <div className="text-dark font-medium">
       Manhattan Green Camp, your perfect escape into nature. Nestled in lush
       forests and near serene lakes, our campground offers tent sites, RV
-      spaces, and cabins for a relaxing outdoor experience. Whether you're a
+      spaces, and cabins for a relaxing outdoor experience. Whether you are a
       seasoned camper or a first-timer, we provide the comforts of home while
       keeping you close to nature.
     </div>
