@@ -38,10 +38,10 @@ const AddressAndPhoto = () => {
 
 const GoogleMaps = () => {
   return (
-    <button className="flex flex-row justify-end items-center cursor-pointer">
+    <a href="https://www.google.com/maps/dir//Stanley+Park,+Vancouver,+BC+V6G+1Z4,+Canada/@49.3027527,-123.1435704,15.56z/data=!4m8!4m7!1m0!1m5!1m1!1s0x5486718cad26e4a3:0x364a639db409e216!2m2!1d-123.1442522!2d49.3042584?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D" className="flex flex-row justify-end items-center cursor-pointer">
       <div className="text-xs text-black mr-12"> View Directions on Google Maps </div>
       <div className="text-black flex-none"> <RightArrowIcon /> </div>
-    </button>
+    </a>
   )
 };
 
