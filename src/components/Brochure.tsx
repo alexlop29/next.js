@@ -1,7 +1,7 @@
 //icons
 import { Forest } from "@/assets/icons/Forest";
 import { CampFire } from "@/assets/icons/CampFire";
-import { Barbecue } from "@/assets/icons/Barbecue";
+import { Barbeque } from "@/assets/icons/Barbeque";
 
 const Title = () => {
   return <div className="text-3xl">What to do</div>;
@@ -20,11 +20,15 @@ const ActivitiesDetails = ({
 }: ActivitiesProps) => {
   // will need to dynamically pass in the icon
   return (
-    <div className="flex flex-row gap-2">
-      <div>{icon}</div>
+    <div className="flex flex-row gap-4">
       <div>
-        <div>{activity}</div>
-        <div>{description}</div>
+        <div className="bg-lightroyalpurple rounded-full p-2">
+        {icon}
+        </div>
+      </div>
+      <div>
+        <div className="text-md font-bold">{activity}</div>
+        <div className="text-xs">{description}</div>
       </div>
     </div>
   );
@@ -32,21 +36,21 @@ const ActivitiesDetails = ({
 
 export const Activities = () => {
   return (
-    <div>
+    <div className="space-y-8">
       <ActivitiesDetails
-        icon={<Forest />}
+        icon={<Forest size={48} />}
         activity="FOREST AREA"
         description="A forest area offers peaceful trails, towering trees, and diverse wildlife. It's ideal for hiking, exploring nature, or relaxing in the fresh air."
       />
       <ActivitiesDetails
-        icon={<CampFire />}
+        icon={<CampFire size={48} />}
         activity="CAMPFIRE"
         description="A campfire is a cozy gathering spot for warmth, storytelling, and roasting marshmallows. It's perfect for unwinding under the stars and enjoying the night outdoors."
       />
       <ActivitiesDetails
-        icon={<Barbecue />}
-        activity="BARBECUE"
-        description="A barbecue is a fun outdoor cooking experience, perfect for grilling delicious food while enjoing the fresh air. It's great for socializing and sharing meals with friends or family."
+        icon={<Barbeque size={48} />}
+        activity="BARBEQUE"
+        description="A barbeque is a fun outdoor cooking experience, perfect for grilling delicious food while enjoing the fresh air. It's great for socializing and sharing meals with friends or family."
       />
     </div>
   );
@@ -88,7 +92,7 @@ const ImportantNumbers = () => {
 export const Panel = () => {
   return (
     <div className="bg-royalpurple">
-      <div className="pt-7 pl-5 pr-5 pb-3.5 space-y-7">
+      <div className="p-8 space-y-12">
         <Title />
         <div className="h-px bg-transparentpurple" />
         <Activities />

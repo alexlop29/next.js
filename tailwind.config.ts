@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'xxs': '0.625rem',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -15,6 +18,7 @@ const config: Config = {
         purple: "#151f6c",
         offwhite: "#f5f6f8",
         dark: "#383839",
+        lightroyalpurple: "#444b89",
         royalpurple: "#1e2772",
         yellow: "#fcce04",
         transparentpurple: "#383f81"
