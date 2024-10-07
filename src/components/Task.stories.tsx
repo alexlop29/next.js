@@ -1,7 +1,7 @@
 import { fn } from "@storybook/test";
 
 // comps
-import { Task } from "./Task";
+import { Task } from './Task';
 
 /*
   The recommended way to write actions is to use the fn utility
@@ -20,20 +20,21 @@ export const ActionsData = {
   onPinTask: fn(),
 };
 
-/*
-  Storybook Autodocs is a powerful tool that can help you quickly 
-  generate comprehensive documentation for your UI components. 
-  https://storybook.js.org/docs/writing-docs/autodocs
-*/
+// /*
+//   Storybook Autodocs is a powerful tool that can help you quickly 
+//   generate comprehensive documentation for your UI components. 
+//   https://storybook.js.org/docs/writing-docs/autodocs
+// */
 
-/*
-  Tells Storybook about the component we are documenting and testing,
-*/
+// /*
+//   Tells Storybook about the component we are documenting and testing,
+// */
 export default {
   component: Task,
-  title: "Task",
-  tags: ["autodocs"],
-  excludeStores: /.*Data$/,
+  title: 'Task',
+  tags: ['autodocs'],
+  //👇 Our exports that end in "Data" are not stories.
+  excludeStories: /.*Data$/,
   args: {
     ...ActionsData,
   },
@@ -42,9 +43,9 @@ export default {
 export const Default = {
   args: {
     task: {
-      id: "1",
-      title: "Test Task",
-      state: "TASK_INBOX",
+      id: '1',
+      title: 'Test Task',
+      state: 'TASK_INBOX',
     },
   },
 };
@@ -53,7 +54,7 @@ export const Pinned = {
   args: {
     task: {
       ...Default.args.task,
-      state: "TASK_PINNED",
+      state: 'TASK_PINNED',
     },
   },
 };
@@ -62,7 +63,7 @@ export const Archived = {
   args: {
     task: {
       ...Default.args.task,
-      state: "TASK_ARCHIVED",
+      state: 'TASK_ARCHIVED',
     },
   },
 };
