@@ -16,7 +16,7 @@ type Provider = {
     availabilities: Availability[];
 }
 
-class ProviderStores {
+export class ProvidersStore {
     profiles: ProviderStore[] = [];
 
     constructor() {
@@ -32,9 +32,12 @@ class ProviderStores {
 
     async addProfile(profile: Provider) {
         let provider = new ProviderStore();
+        console.log(`adding profile: ${profile}`);
         provider.addProfile(profile);
         this.profiles.push(provider);
+        console.log(`checking ProvidersStore profile`, this.profiles);
         await this.save(profile);
+        console.log(`save complete`);
     }
 
     async save(profile: Provider) {
@@ -55,7 +58,7 @@ class ProviderStores {
 };
 
 class ProviderStore {
-    profile = {};
+    profile: Provider | {} = {};
     bookings = [];
     availabilities = [];
 
