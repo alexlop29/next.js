@@ -49,7 +49,7 @@ const page = () => {
     <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-4 p-4">
       <div className="sm:col-span-1 bg-white p-4 rounded-lg text-black">
         <div>Provider Enrollment</div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input
             className="border h-8 w-full text-black bg-white outline-none p-2"
             type="text"
@@ -90,7 +90,7 @@ const page = () => {
             placeholder="Availabilities"
             onChange={handleChange}
           />
-          <button onClick={() => handleSubmit}>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
